@@ -14,7 +14,7 @@ export function setupScene(name: string) {
     const renderer = new THREE.WebGLRenderer();
     renderer.setSize( viewerSize.width, viewerSize.height );
 
-    let element = document.getElementById("viewer")!;
+    let element = document.getElementById(name)!;
 
     element.appendChild( renderer.domElement );
 
@@ -26,8 +26,6 @@ export function setupScene(name: string) {
     const geometry = new THREE.BoxGeometry( 1, 1, 1 );
     const material = new THREE.MeshBasicMaterial( { color: 0x00ff00 } );
     const cube = new THREE.Mesh( geometry, material );
-
-    cube.position.set(1,1,1);
 
     scene.add( cube );
 
