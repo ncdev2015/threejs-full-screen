@@ -31,9 +31,9 @@ export function setupScene(name: string) {
 
     scene.add( cube );
 
-    camera.position.set(1, 1, 5);
+    camera.position.set(3, 4, 3);
 
-    renderer.render( scene, camera );
+    controls.update();
 
     function animate() {
         requestAnimationFrame( animate );
